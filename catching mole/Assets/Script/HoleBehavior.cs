@@ -8,8 +8,8 @@ public class HoleBehavior : MonoBehaviour
 
     void Start()
     {
-        Invoke("Spawn", 3f);//call methode after giving of time in second, make sure it's same name as methode
-
+        //Invoke("Spawn", 3f);//call methode after giving of time in second, make sure it's same name as methode
+        Invoke("Spawn", Random.Range(3f, 7f));//invoke once again
     }
     //spawn after start
     void Spawn()
