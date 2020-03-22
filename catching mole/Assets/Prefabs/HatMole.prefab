@@ -887,6 +887,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 2
+  score: 2
+  myParent: {fileID: 0}
   anim: {fileID: 0}
 --- !u!136 &4337342178642347871
 CapsuleCollider:

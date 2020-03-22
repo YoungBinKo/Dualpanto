@@ -6,6 +6,8 @@ public class MoleBehavior : MonoBehaviour
 {
     Collider col;
     public int hitPoints = 1;
+    public int score = 1;
+    [HideInInspector] public GameObject myParent;
 
     [HideInInspector]public Animator anim;//to have animator component conector
     //HideInInspector makes a variable not show up in the inspector but be serialized
@@ -19,6 +21,7 @@ public class MoleBehavior : MonoBehaviour
     }
     public void DestroyObj()
     {
+        myParent.GetComponent<HoleBehavior>().hasMole = false;
         Destroy(gameObject);
     }
     public void SwitchCollider(int num)
@@ -37,6 +40,8 @@ public class MoleBehavior : MonoBehaviour
         }
         else
         {
+            myParent.GetComponent<HoleBehavior>().hasMole = false;
+            ScoreManager.AddScore(score);
             Destroy(gameObject);
         }
         
